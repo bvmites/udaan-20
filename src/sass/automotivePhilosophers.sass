@@ -1,0 +1,101 @@
+#automotivePhilosophers
+  position: absolute
+  height: 100%
+  width: 100%
+  overflow: hidden
+  //background: url("../assets/station.png") no-repeat center center
+  //background-size: cover
+
+.bgImage
+  height: 100%
+  width: 100%
+.events
+  position: absolute
+  height: 50%
+  width: 100%
+  top: 40%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  .event
+    font-family: 'dumbledore', sans-serif
+    font-weight: bolder
+    text-transform: uppercase
+    height: 256px
+    width: 256px
+    background: url("../assets/Smoke30Frames_0.png") no-repeat top left
+    margin: 10px
+    display: inline-block
+    color: white
+    padding: 0
+    animation: playX 1s steps(6) infinite, playY 5s steps(5) infinite
+    transition: all 0.2s ease-out
+    &:hover
+      transform: scale(1.2)
+    span
+      display: inline-block
+      margin-top: 50%
+
+@keyframes playX
+  100%
+    background-position-x: -1536px
+
+@keyframes playY
+  100%
+    background-position-y: -1280
+
+
+.eventDescription
+  position: absolute
+  height: 80%
+  width: 50%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url("../assets/page.png") no-repeat center center
+  background-size: cover
+  border-radius: 25px
+  text-align: center
+  font-family: muggleNews, sans-serif
+  .eventName
+    font-size: 34px
+  .rounds
+    margin-top: 20px
+    text-align: justify
+    .round
+      padding: 10px
+  .managers
+    margin-top: 20px
+    .manager
+      display: inline-block
+      margin: 10px
+
+.move-enter-active
+  animation: move-in 0.5s linear
+
+.move-leave-active
+  animation: move-in 0.5s linear reverse
+
+@keyframes move-in
+  0%
+    left: -100%
+  100%
+    left: 50%
+@media (min-width: 320px) and (max-width: 840px)
+  .events
+    top: 20%
+    left: 12%
+    width: 200vw
+    position: absolute
+    transform: scale(0.6) translate(-50%, -50%)
+    font-size: 24px
+  .eventDescription
+    width: 95%
+    overflow: scroll
+
+  .back
+    position: unset !important
+    padding: 10px
+  .bgImage
+    width: unset
+    transform: translateX(-30%) !important

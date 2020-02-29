@@ -1,0 +1,124 @@
+#gobletOfEntertainment
+  position: absolute
+  height: 100%
+  width: 100%
+  background: url("../assets/gobletOfFireBg.jpg") no-repeat bottom center
+  background-size: cover
+
+
+.goblet
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  img
+    max-height: 500px
+
+
+.flame
+  width: 4em
+  height: 4em
+  font-size: 24px
+  position: absolute
+  top: 1%
+  left: 52%
+  z-index: -1
+  transform: translate(-50%, -50%)
+  span
+    position: absolute
+    width: 4em
+    height: 4em
+    background: radial-gradient( #3d84ff 70%, rgba(255, 255, 255, .8))
+    border-radius: 50%
+    bottom: 0
+    left: calc((var(--n) - 1) * 5em / var(--particles))
+    mix-blend-mode: screen
+    animation: rise 1s ease-in infinite
+    animation-delay: calc(var(--rnd) * 1s)
+
+
+@keyframes rise
+  from
+    transform: translateY(0) scale(1)
+    filter: opacity(0)
+
+  25%
+    filter: opacity(1)
+
+  to
+    transform: translateY(-10em) scale(0)
+    filter: opacity(0)
+
+.events
+  position: absolute
+  height: 50%
+  width: 100%
+  left: 50%
+  top: 50%
+  text-align: center
+  transform: translate(-50%, -50%)
+  transition: all 0.2s linear
+  .event
+    margin: 40px
+    display: inline-block
+    background: url("../assets/page.png") no-repeat center center
+    background-size: cover
+    position: relative
+    height: 150px
+    width: 250px
+    opacity: 1
+    font-size: 48px
+    color: black
+    font-family: halfBloodPrince, sans-serif
+    transition: all 0.2s linear
+    &:hover
+      z-index: 2 !important
+      transform: rotate(0deg) !important
+
+.eventDescription
+  position: absolute
+  height: 80%
+  width: 50%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url("../assets/page.png") no-repeat center center
+  background-size: cover
+  border-radius: 25px
+  text-align: center
+  font-family: muggleNews, sans-serif
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
+  overflow: scroll
+  .eventName
+    font-size: 34px
+  .rounds
+    margin-top: 20px
+    text-align: justify
+    .round
+      padding: 20px
+  .managers
+    margin-top: 20px
+    .manager
+      display: inline-block
+      margin: 10px
+@media (min-width: 320px) and (max-width: 540px)
+  .flame
+    height: 2em
+    width: 2em
+    span
+      height: 2em
+      width: 2em
+  .events
+    width: 100%
+    .event
+      margin: 25px
+      font-size: 20px
+      height: 80px !important
+      width: 100px !important
+  .eventDescription
+    width: 95%
+    overflow: scroll
+
+  .back
+    position: unset !important
+    padding: 10px

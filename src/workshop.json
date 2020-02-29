@@ -1,0 +1,63 @@
+[
+  {
+    "_id": "5c6ab005a034092f8c482ef6",
+    "participants": [],
+    "entryFee": 30,
+    "eventName": "Python Bootcamp",
+    "eventType": "tech",
+    "managers": [
+      {
+        "name": "Parixit Sanghani",
+        "phone": "9825552163"
+      }
+    ],
+    "rounds": [
+      "Topics to be covered:\n1. Core Python\n2. Introduction to advanced python\n3. Introduction to \"numpy\" library"
+    ],
+    "tagline": "Hands on workshop",
+    "teamSize": 1,
+    "notes": "Download python IDE from following link and install it before the workshop.\n\n1) For windows x86 and 64bit os \nhttps://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe \n2) For other os \nhttps://www.python.org/downloads/release/python-372/\n\nConnect your PC with internet and  open command prompt window then You can install packages via commands such as: \npython -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose \nWhere user is to be replaced your username \nFully charge your laptop prior to workshop"
+  },
+  {
+    "_id": "5c6ab005a034092f8c482ef6",
+    "participants": [],
+    "entryFee": 400,
+    "eventName": "Wizards of IOT",
+    "eventType": "tech",
+    "managers": [
+      {
+        "name": "Chirag Thakar",
+        "phone": "9723581176"
+      }
+    ],
+    "rounds": [
+      "This is a handson workshop\nEvent Duration: 6 hours\nOne kit will be provided per team. Kit will be given away after the workshop.\nIt is compulsory for participants to bring a laptop(one laptop per team) with the required software properly installed in it."
+    ],
+    "tagline": "Hands on workshop",
+    "teamSize": 5,
+    "notes": "Software Details:\nhttps://drive.google.com/file/d/1nQg-W9viTYpqL_94ZaXaA4uoe3gl8qRg/view?usp=drivesdk"
+  },
+  {
+    "_id": "5c6ab005a034092f8c482ef6",
+    "participants": [],
+    "entryFee": 60,
+    "eventName": "Drone Workshop",
+    "eventType": "tech",
+    "managers": [
+      {
+        "name": "Jaimin Kevadiya",
+        "phone": "8530920279 "
+      },
+      {
+        "name": "Komal Dharjiya",
+        "phone": "9737434026 "
+      }
+    ],
+    "rounds": [
+      "Do you find yourself wanting to be equipped with skills to build a new-age technology device that is finding application across sectors ranging from military to entertainment?\nDrones have always awed people and wouldn't it be cooler if you knew to build one?\nRegister for our workshop where you can learn how to build a drone from scratch and embrace the drone paradigm that is taking over the world, quite literally!\nSession 1: Basic knowledge about Drones, there working and technical connections\nSession 2: Hands on, on kits of the expert."
+    ],
+    "tagline": "Hands on workshop",
+    "teamSize": 1,
+    "notes": "Topics:\nhttps://drive.google.com/file/d/0B4Cb_VcuHDR-VXFlYjhkcXg0dnJlZTNMUlJFZnpoTVR6aXZv/view?usp=drivesdk"
+  }
+]

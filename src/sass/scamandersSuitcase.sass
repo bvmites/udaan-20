@@ -1,0 +1,115 @@
+@import variables
+
+#scamandersSuitcase
+  position: absolute
+  height: 100%
+  width: 100%
+  background: url("../assets/scamandersSuitcase.png") no-repeat center center
+  background-size: cover
+  font-family: 'fantasticBeast', sans-serif
+  overflow: hidden
+//color: white
+#introComponent
+  color: white
+
+.events
+  position: absolute
+  height: 50%
+  width: 80%
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+
+  .event
+    position: relative
+    display: inline-block
+    height: 150px
+    width: 150px
+    margin: 10px
+    border-radius: 50%
+
+    font-weight: bolder
+    font-size: 12px
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+    background: url("../assets/page.png") no-repeat center center
+    background-size: cover
+    transition: all 0.2s ease-out
+    &:hover
+      transform: scale(1.2) translateY(-10px) !important
+    div
+      position: relative
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+.eventDescription
+  position: absolute
+  height: 80%
+  width: 30%
+  top: 50%
+  left: 50%
+  background: white
+  transform: translate(-50%, -50%)
+  text-align: center
+  background: url("../assets/page.png") no-repeat center center
+  background-size: cover
+  overflow: scroll
+  .eventName
+    margin-top: 20px
+    font-size: 24px
+    font-weight: bolder
+  .tagline
+    //margin-top: 10px
+    font-size: 14px
+  .rounds
+    margin-top: 10px
+    padding: 10px
+    font-family: dumbledore, sans-serif
+    font-size: 18px
+    font-style: italic
+    .round
+      .roundIndice
+        font-weight: bolder
+      padding: 5px
+      text-align: justify
+  .managers
+    margin-top: 20px
+    .manager
+      display: inline-block
+      margin: 10px
+      padding: 5px
+      font-size: 12px
+      font-weight: bolder
+  .back
+    font-weight: bolder
+
+.scale-enter-active
+  animation: scale-in 0.5s linear
+
+.scale-leave-active
+  animation: scale-in 0.5s linear reverse
+@keyframes scale-in
+  0%
+    opacity: 0
+    transform: scale(0) translate(-100%, -100%)
+  100%
+    opacity: 1
+    transform: scale(1) translate(-50%, -50%)
+@media (min-width: 320px) and (max-width: 540px)
+  #scamandersSuitcase
+    overflow: scroll
+  .events
+    width: 100%
+  .event
+    height: 100px !important
+    width: 100px !important
+    font-size: 8px !important
+  .eventDescription
+    width: 100%
+    overflow: scroll
+    .back
+      position: unset
+      transform: translateX(0)
+      padding-top: 20px
+      padding-bottom: 20px

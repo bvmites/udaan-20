@@ -1,0 +1,115 @@
+#chamberOfCoders
+  position: absolute
+  height: 100%
+  width: 100%
+  background: url("https://images.ctfassets.net/bxd3o8b291gf/4p6zFT0QAEWw8aQQau0m2o/27f059a598ca32ebc06ab73b295b7f0b/Fawkes_WB_F2_FawkesAttackingBasilisk_Illust_100615_Land.jpg?w=1200") no-repeat center center
+  background-size: cover
+  font-family: muggleNews, sans-serif
+  color: white
+  overflow: hidden
+
+.logo
+  position: absolute
+  height: 50%
+  width: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  z-index: 2
+  img
+    height: 90%
+  .hat
+    height: 100px
+    position: relative
+
+  .heading
+    position: relative
+    top: -25%
+    margin-top: 20px
+    z-index: -1
+.events
+  position: absolute
+  height: 50%
+  width: 100%
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  color: white
+  text-align: center
+  .event
+    margin: 10px
+    font-size: 20px
+    &:hover
+      transition: all 0.2s ease-out
+      transform: scale(1.4) !important
+
+.eventDescription
+  position: absolute
+  height: 95%
+  width: 60%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  color: #555555
+  background: url("../assets/page.png") no-repeat center center
+  background-size: cover
+  overflow: scroll
+  .eventName
+    margin-top: 20px
+    font-size: 28px
+    font-weight: bolder
+  .tagline
+    font-size: 20px
+    //margin-top: 10px
+  .rounds
+    width: 90%
+    margin-top: 20px
+    text-align: justify
+    .round
+      padding: 10px
+      .roundIndice
+        font-weight: bolder
+  .managers
+    margin-top: 20px
+    .manager
+      display: inline-block
+      margin: 15px
+  .back
+    margin-top: 50px
+    margin-bottom: 20px
+
+.slit-enter-active
+  animation: slit 0.5s ease-out both
+
+.slit-leave-active
+  animation: slit 0.5s ease-out reverse both
+
+@keyframes slit
+  0%
+    transform: translateZ(-800px) rotateX(90deg) translate(-50%, -50%)
+    opacity: 0
+
+  54%
+    transform: translateZ(-160px) rotateX(87deg) translate(-50%, -50%)
+    opacity: 1
+
+  100%
+    transform: translateZ(0) rotateX(0) translate(-50%, -50%)
+@media (min-width: 320px) and (max-width: 540px)
+  .logo
+    .hat
+      height: 80px
+      //transform: translateX(-140px) rotate(-90deg)
+      animation: tip 0.5s linear forwards
+      animation-delay: 0.5s
+    .heading
+      font-size: 24px
+  .eventDescription
+    width: 90% !important
+    overflow: scroll
+
+  @keyframes tip
+    100%
+      transform: translateX(-140px) rotate(-90deg)

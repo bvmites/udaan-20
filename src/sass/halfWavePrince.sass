@@ -1,0 +1,225 @@
+@import variables
+
+#halfWavePrince
+  position: absolute
+  height: 100%
+  width: 100%
+  font-family: 'halfBloodPrince', cursive
+  background: url("https://wallpapers-house.com/data/out/6/wallpaper2you_124331.jpg") no-repeat center center
+  background-size: cover
+  overflow: hidden
+
+.left-side
+  position: absolute
+  height: 100%
+  width: 50%
+  .front
+    height: 100%
+    width: 100%
+    z-index: 1
+    position: absolute
+    left: 100%
+    img
+      height: 100vh
+  .back
+    position: absolute
+    height: 100%
+    width: 100%
+    left: 100%
+    img
+      height: 100vh
+.right-side
+  position: absolute
+  height: 100%
+  width: 50%
+  right: 0
+  img
+    height: 100vh
+/*width: 100%*/
+
+
+@mixin stroke-animation ($stroke-dashoffset, $time, $fill)
+  animation: stroke-animation $time cubic-bezier(0,0.23,1,0.1)
+  @keyframes stroke-animation
+    0%
+      opacity: 0
+      fill: none
+      stroke-dashoffset: $stroke-dashoffset
+    30%
+      opacity: 1
+      fill: none
+    90%
+      fill: none
+    100%
+      opacity: 1
+      fill: $fill
+      stroke-dashoffset: 0
+
+
+#snape
+  position: absolute
+  top: 50%
+  left: 25%
+  transform: translate(-25%, -50%)
+  transition: all 0.3s ease-out
+
+  #book path
+    stroke-dasharray: 130
+    @include stroke-animation(130, 3s, transparent)
+    animation-delay: 2.2s
+  #cover-page
+    stroke-dasharray: 130
+    @include stroke-animation(130, 3s, rgb(215, 201, 166))
+    animation-delay: 2.2s
+
+  #snapeBody, #snapeFace, #faceDetails
+    animation: hover 2s linear infinite alternate
+    z-index: 5
+
+
+@keyframes hover
+  0%
+    transform: translateY(0)
+
+  100%
+    transform: translateY(-2px)
+
+
+
+
+.events
+  position: absolute
+  width: 100%
+  text-align: center
+  top: 35%
+  left: 30%
+  transform: translateX(-50%)
+  .event
+    padding: 10px
+    text-transform: initial
+    font-size: 32px
+    text-align: center
+    transition: all 0.2 ease-out
+    &:hover
+      color: white
+
+.page-2-right
+  overflow: scroll
+.eventDescription
+  position: absolute
+  top: 10%
+  width: 62%
+  text-align: center
+  overflow: scroll !important
+  .eventName
+    font-size: 24px
+  .tagline
+    font-size: 22px
+  .entryFee
+    font-family: dumbledore, sans-serif
+    font-style: italic
+    font-size: 22px
+  .rounds
+    padding-top: 20px
+    width: 90%
+    overflow: scroll !important
+    .round-indice
+      font-weight: bolder
+    .round
+      font-family: dumbledore, sans-serif
+      font-style: italic
+      text-indent: 5%
+      text-align: justify
+      font-size: 20px
+      padding: 15px
+  .managers
+    .manager
+      display: inline-block
+      padding: 20px
+      font-family: dumbledore, sans-serif
+      font-style: italic
+
+  .back
+    font-size: 25px
+    font-weight: bolder
+@media (min-width: 320px) and (max-width: 540px)
+  .left-side, .right-side
+    width: 100%
+  .left-side
+    .front
+      left: 0
+
+  .events
+    left: 0
+    transform: translateX(0)
+
+  .eventDescription
+    width: 100%
+    .managers
+      margin-top: 10px
+      .manager
+        padding: 5px
+    .rounds
+      width: 90%
+      .round
+        overflow: scroll !important
+        font-size: 14px !important
+
+
+@media (min-width: 540px) and (max-width: 780px)
+  .events
+    left: 34%
+  .event
+    font-size: 18px !important
+    left: 0 !important
+    transform: translateX(0) !important
+
+  .eventDescription
+    width: 70% !important
+    .eventName
+      font-size: 12px
+    .tagline
+      font-size: 10px
+    .rounds
+      .round
+        font-size: 10px !important
+        padding: 5px
+
+    .managers
+      .manager
+        font-size: 10px
+        padding: 5px
+
+    .back
+      font-size: 14px
+
+@media (min-width: 800px) and (max-width: 840px)
+  .events
+    left: 32%
+  .event
+    font-size: 18px !important
+    left: 0 !important
+    transform: translateX(0) !important
+
+  .eventDescription
+    width: 57% !important
+    .eventName
+      font-size: 12px
+    .tagline
+      font-size: 10px
+    .rounds
+      .round
+        font-size: 10px !important
+        padding: 5px
+
+    .managers
+      .manager
+        font-size: 10px
+        padding: 5px
+
+    .back
+      font-size: 14px
+@media (min-height: 360px) and (max-height: 540px)
+  #snape
+    height: 200px
+    left: 15%

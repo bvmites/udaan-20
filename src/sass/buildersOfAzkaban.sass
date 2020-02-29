@@ -1,0 +1,195 @@
+@font-face
+  font-family: Magic1
+  src: url("../assets/MagicSchoolOne.ttf")
+
+@font-face
+  font-family: lumos
+  src: url("../assets/LUMOS.TTF")
+
+@font-face
+  font-family: dum
+  src: url("../assets/dum1ital.ttf")
+
+@font-face
+  font-family: headlineOne
+  src: url("../assets/headlineOne.TTF")
+@keyframes upText
+  100%
+    transform: translateY(0)
+
+@keyframes scaling1
+  0%
+    transform: scaleY(0)
+  100%
+    transform: scaleY(1)
+
+@keyframes rain
+  0%
+    background-position: 0% 0%
+  100%
+    background-position: 10% 100%
+
+@keyframes light
+  0%
+    opacity: 0
+  10%
+    opacity: 0
+  11%
+    opacity: 0.5
+  14%
+    opacity: 0
+  20%
+    opacity: 0
+  21%
+    opacity: 0.5
+  24%
+    opacity: 0
+  100%
+    opacity: 0
+
+#buidersOfAzkaban
+  position: absolute
+  width: 100%
+  height: 100%
+  background: url("../assets/Azkaban_concept_art.png") no-repeat center top
+  background-size: cover
+  font-family: "Magic1", sans-serif
+  text-align: center
+
+.rain
+  height: 100%
+  background-image: url("../assets/rain.png")
+  animation: rain .3s linear infinite
+
+.rain:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #f8f8f8
+  animation: light 4s linear infinite
+  opacity: 0
+
+.heading
+  position: absolute
+  font-size: 4.5rem
+  overflow: hidden
+  letter-spacing: 3px
+  color: white
+  left: 50%
+  top: 50%
+  margin: 0
+  transform: translate(-50%,-50%)
+  text-align: center
+
+.heading p
+  margin: 0
+  transform: scaleY(0)
+  animation: scaling1 1s 2 alternate ease-out
+
+.events
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  height: 50%
+  width: 100%
+  color: white
+  text-align: center
+  font-size: 32px
+  .event
+    margin: 10px
+
+.eventDescription
+  position: absolute
+  height: 95%
+  width: 30%
+  top: 50%
+  border-radius: 5%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url("../assets/page2.jpg")
+  background-size: cover
+  .eventName, .tagline, .entryFee
+    text-align: center
+    margin-top: 1%
+    font-size: 36px
+    font-family: 'headlineOne', sans-serif
+  .tagline, .entryFee
+    font-size: 22px
+    margin-top: -2%
+  .event-content
+    height: 70%
+    width: 90%
+    border: 5px solid black
+    position: absolute
+    left: 50%
+    top: 50%
+    overflow: scroll
+    padding-bottom: 40px
+    transform: translate(-50%, -50%)
+  .round
+    padding: 10px
+    font-family: dumbledore, sans-serif
+    font-style: italic
+    text-align: justify
+    .roundIndice
+      font-size: 20px
+      font-weight: bolder
+  .managers
+    width: 100%
+    //position: absolute
+    //bottom: -2%
+    padding-bottom: 10%
+    font-family: dumbledore, sans-serif
+    font-style: italic
+    .manager
+      display: inline-block
+      margin: 5px
+      font-weight: bolder
+      font-size: 20px
+.warning
+  position: absolute
+  bottom: 12%
+  left: 50%
+  transform: translateX(-50%)
+  font-family: headlineOne, sans-serif
+  background: #91070C
+  color: white
+  width: 80%
+
+.back
+  position: absolute
+  width: 100%
+  bottom: 4%
+  font-family: headlineOne, sans-serif
+
+.fade-enter-active
+  animation: unfold 0.5s linear
+
+.fade-leave-active
+  animation: unfold 0.5s linear reverse
+
+#introComponent
+  color: white
+@keyframes unfold
+  0%
+    height: 0
+
+  100%
+    height: 95%
+
+
+@media (min-width: 320px) and (max-width: 640px)
+  .eventDescription
+    width: 90%
+  .manager
+    position: initial
+    font-size: 16px
+  .heading
+    font-size: 38px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)

@@ -1,0 +1,178 @@
+@import variables
+
+#map
+  position: absolute
+  background: url("https://allfreshwallpapers.com/uploads/posts/hd-wallpapers-harry-potter/hd_wallpapers_harry_potter_001.jpg") no-repeat
+  background-size: cover
+  height: 100vh
+  width: 100vw
+  overflow: hidden
+
+.center-piece
+  position: absolute
+  background-size: cover
+  height: 100%
+  width: 33.3%
+  left: 50%
+  transform: translateX(-50%)
+
+.left-far, .right-far, .left-near, .right-near
+  height: 100%
+  width: 16.66%
+  position: absolute
+  z-index: 2
+
+.left-far
+  left: 33.3%
+  /*transform: rotateY(180deg) translateX(100%);
+  transform-origin: top left
+  background: url("../assets/1.png") no-repeat center center
+  background-size: cover
+
+.right-far
+  right: 33.35%
+  background: url('../assets/17.png') no-repeat center center
+  background-size: cover
+  /*transform: rotateY(180deg) translateX(-100%);
+  transform-origin: top right
+
+.left-near
+  left: 16.7%
+  background: url('../assets/8.png') no-repeat
+  background-size: cover
+
+.right-near
+  right: 16.7%
+  background: url('../assets/18.png') no-repeat
+  background-size: cover
+
+.center-piece
+  .departments
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: 3
+    text-align: center
+    color: black
+    //font-weight: bolder
+    .department
+      .deptName
+        display: block
+        //padding-top: 10px
+  .top-side
+    height: 25%
+    width: 100%
+    position: absolute
+  .bottom-side
+    height: 25%
+    width: 100%
+    position: absolute
+    bottom: 25%
+    background: url('../assets/9-3.png') no-repeat top
+    background-size: cover
+  /*transform: rotateX(180deg);
+  /*transform-origin: bottom
+  .top-side
+    top: 25%
+    background: url('../assets/9-1.png') no-repeat bottom
+    background-size: cover
+/*transform: rotateX(180deg);
+/*transform-origin: top
+
+@keyframes hover
+  100%
+    transform: translateX(10px) scale(0.7)
+.info
+  color: white
+  position: absolute
+  top: 90%
+  left: 50%
+  background: #6B5A4F
+  border-radius: 5px
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
+  transform: translate(-50%, -50%)
+  z-index: 2
+  font-family: 'dumbledore', sans-serif
+  width: 150px
+  text-align: center
+  text-transform: uppercase
+  font-weight: bolder
+
+
+.text
+  font-size: 42px
+  color: #6B5A4F
+  z-index: 2
+  font-family: 'MagicSchool', sans-serif
+  position: absolute
+  left: 50%
+  top: 75%
+  background: #E7D7A2
+  border-radius: 5px
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25)
+  transform: translate(-50%, -50%)
+  text-align: center
+  padding: 5px
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25)
+
+.letter
+  display: inline-block
+
+.walk
+  background: url("../assets/walk.png") no-repeat left
+  background-size: cover
+  position: absolute
+  top: 56%
+  left: 22%
+  height: 256px
+  width: 256px
+  z-index: 3
+  transform: translate(-50%, -50%) scale(0.5) rotate(90deg)
+  animation: walk 2s steps(6) infinite, move 5s linear infinite
+
+@keyframes walk
+  100%
+    background-position-x: -1536px
+
+
+@keyframes move
+  100%
+    left: 35%
+    top: 60%
+
+@media (min-width: 320px) and (max-width: 540px)
+  .text
+    width: 300px
+    font-size: 32px
+  .info
+    font-size: 12px
+    width: 100px
+  .center-piece
+    width: 100%
+  .left-far, .right-far
+    width: 50%
+  .left-far
+    left: 0
+  .right-far
+    right: 0
+  .left-near, .right-near
+    display: none
+  .walk
+    top: 52%
+    left: 31%
+    transform: translate(-50%, -50%) scale(0.3) rotate(90deg)
+  .departments
+    overflow: hidden
+  .department
+    transform: scale(0.6) !important
+  @keyframes hover
+    100%
+      transform: translateX(10px) scale(0.6)
+  @keyframes move
+    100%
+      left: 45%
+      top: 54%
+
+@media (min-width: 320px) and (max-width: 1024px)
+  .cursor
+    display: none
