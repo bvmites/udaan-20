@@ -62,3 +62,8 @@
 <style scoped lang="sass">
     @import ../sass/mapComponent
 </style>
+<style scoped lang="css">
+    a:hover {
+        cursor:pointer;
+    }
+</style>

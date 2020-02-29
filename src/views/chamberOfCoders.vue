@@ -1,6 +1,6 @@
 <template>
     <div id="chamberOfCoders">
-        <div class="backArrow" @click="$router.push('/map')">
+        <div class="backArrow" @click="$router.push('/events')">
             <span>&lt;</span>
         </div>
         <div class="logo">
@@ -116,10 +116,10 @@
         letter.style.display = "inline-block"
       })
 
-      let t2 = new this.$gsap.TimelineMax({
-        repeat: -1,
-        yoyo: true
-      })
+      // let t2 = new this.$gsap.TimelineMax({
+      //   repeat: -1,
+      //   yoyo: true
+      // })
 
       tl.staggerTo(".letter", 0.5, {
         scale: 1.2

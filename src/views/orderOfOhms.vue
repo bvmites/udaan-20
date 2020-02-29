@@ -5,7 +5,7 @@
             <div class="heading">Order Of Ohms</div>
             <div class="ohmsLogo"><img src="../assets/Order_of_OHMS.png" alt="" class="logo"></div>
         </div>
-        <div class="backArrow" @click="$router.push('/map')">
+        <div class="backArrow" @click="$router.push('/events')">
             <span>&lt;</span>
         </div>
         <div class="circles">

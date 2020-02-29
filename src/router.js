@@ -10,7 +10,6 @@ import gobletOfWorkshops from './views/gobletOfWorkshops'
 import orderOfOhms from "./views/orderOfOhms"
 import chamberOfCoders from './views/chamberOfCoders'
 import team from './views/team'
-import mapComponent from './components/mapComponent'
 import eventsComponent from "@/components/eventsComponent";
 import aboutComponent from "@/components/aboutComponent";
 
@@ -78,10 +77,5 @@ export default new Router({
       name: 'team',
       component: team
     },
-    {
-      path: '/map',
-      name: 'map',
-      component: mapComponent
-    }
   ]
 })

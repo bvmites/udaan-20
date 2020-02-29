@@ -42,4 +42,7 @@
         left: 65%;
         color: black;
     }
+    a:hover {
+        cursor:pointer;
+    }
 </style>
