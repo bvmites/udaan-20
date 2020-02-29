@@ -2,10 +2,10 @@
     <div id="scamandersSuitcase">
         <introComponent :dept="dept"></introComponent>
         <div class="backArrow" @click="$router.push('/map')">
-            <span><</span>
+            <span>&lt;</span>
         </div>
         <div class="events">
-            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event">
+            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
                 <div>{{ event.eventName }}</div>
             </div>
         </div>
@@ -16,7 +16,7 @@
                 <div class="entryFee">Entry Fee: {{ eventsDetail.entryFee}}</div>
                 <div class="entryFee">Team Size: {{ eventsDetail.teamSize}}</div>
                 <div class="rounds">
-                    <div class="round" v-for="(round, index) in eventsDetail.rounds">
+                    <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
                         <span class="roundIndice">Round {{ index + 1 }} : </span>
                         {{round}}
                     </div>
@@ -25,7 +25,7 @@
                     Notes: <pre>{{eventsDetail.notes}}</pre>
                 </div>
                 <div class="managers">
-                    <div class="manager" v-for="manager in eventsDetail.managers">
+                    <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                         <div class="name">{{manager.name}}</div>
                         <div class="contact">{{manager.phone}}</div>
                     </div>

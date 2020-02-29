@@ -1,16 +1,16 @@
 <template>
     <div id="gobletOfEntertainment">
         <div class="backArrow" @click="$router.push('/map')">
-            <span><</span>
+            <span>&lt;</span>
         </div>
         <div class="goblet">
              <div class="flame">
-                <span v-for="n in 100" :style="{'--n':n, '--rnd': Math.random()}"></span>
+                <span v-for="n in 100" v-bind:key="n" :style="{'--n':n, '--rnd': Math.random()}"></span>
             </div>
             <img src="../assets/goblet.png" alt="goblet" class="img-fluid">
         </div>
         <div class="events">
-            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event">{{ event.eventName }}</div>
+            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{ event.eventName }}</div>
         </div>
 
         <div class="eventDescription" v-if="eventsDetail">
@@ -19,7 +19,7 @@
             <div class="entryFee">Entry Fee: {{eventsDetail.entryFee}}</div>
             <div class="teamSize">Team size: {{eventsDetail.teamSize}}</div>
             <div class="rounds">
-                <div class="round" v-for="(round, index) in eventsDetail.rounds">
+                <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
                     Description : <pre>{{round}}</pre>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 Notes: <pre>{{eventsDetail.notes}}</pre>
             </div>
             <div class="managers">
-                <div class="manager" v-for="manager in eventsDetail.managers">
+                <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                     <div class="name">{{manager.name}}</div>
                     <div class="contact">{{manager.phone}}</div>
                 </div>

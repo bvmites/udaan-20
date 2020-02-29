@@ -1,7 +1,7 @@
 <template>
     <div id="halfWavePrince">
         <div class="backArrow" @click="$router.push('/map')">
-            <span><</span>
+            <span>&lt;</span>
         </div>
         <div class="book">
             <div class="left-side">
@@ -174,7 +174,7 @@
             <div class="right-side" id="right-side">
                 <img src="../assets/halfWavePrince.png" alt="halfWavePrince" class="img-fluid">
                 <div class="events">
-                    <div class="event" v-for="event in deptEvents" @click="showDetails(event)">
+                    <div class="event" v-for="event in deptEvents" @click="showDetails(event)" v-bind:key="event">
                         {{event.eventName}}
                     </div>
                 </div>
@@ -186,10 +186,11 @@
                     <div class="tagline">{{event.tagline}}</div>
                     <div class="entryFee">Entry Fee: {{event.entryFee}}/{{event.teamSize}}</div>
                     <div class="rounds mx-auto">
-                        <div class="round" v-for="(round, index) in event.rounds"><span class="round-indice">Round {{index + 1}}: </span>{{round}}</div>
+                        <div class="round" v-for="(round, index) in event.rounds" v-bind:key="index">
+                            <span class="round-indice">Round {{index + 1}}: </span>{{round}}</div>
                     </div>
                     <div class="managers">
-                        <div class="manager" v-for="manager in event.managers">
+                        <div class="manager" v-for="manager in event.managers" v-bind:key="manager">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
                         </div>

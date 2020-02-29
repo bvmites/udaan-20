@@ -6,7 +6,7 @@
             <div class="ohmsLogo"><img src="../assets/Order_of_OHMS.png" alt="" class="logo"></div>
         </div>
         <div class="backArrow" @click="$router.push('/map')">
-            <span><</span>
+            <span>&lt;</span>
         </div>
         <div class="circles">
             <div style="top: 5%; left: 35%"></div>
@@ -44,7 +44,7 @@
             <div style="bottom: 1%; left: 35%"></div>
         </div>
         <div class="events">
-            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event">{{ event.eventName }}</div>
+            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{ event.eventName }}</div>
         </div>
         <transition name="fade">
             <div class="eventDescription" v-if="eventsDetail">
@@ -52,7 +52,7 @@
                 <div class="tagline">{{ eventsDetail.tagline }}</div>
                 <div class="event-content">
                     <div class="rounds">
-                        <div class="round" v-for="(round, index) in eventsDetail.rounds">
+                        <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
                             <span class="roundIndice">Round {{index + 1}} : </span>
                             {{round}}
                         </div>
@@ -63,7 +63,7 @@
                         Notes: <pre>{{eventsDetail.notes}}</pre>
                     </div>
                     <div class="managers">
-                        <div class="manager" v-for="manager in eventsDetail.managers">
+                        <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
                         </div>

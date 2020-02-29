@@ -1,11 +1,11 @@
 <template>
     <div id="madHollows">
         <div class="backArrow" @click="$router.push('/map')">
-            <span><</span>
+            <span>&lt;</span>
         </div>
         <introComponent :dept="dept"></introComponent>
         <div class="events">
-            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event">
+            <div class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
                 <span>{{event.eventName}}</span>
             </div>
         </div>
@@ -15,13 +15,13 @@
                 <div class="tagline">{{ eventsDetail.tagline }}</div>
                 <div class="entryFee">Entry Fee: {{ eventsDetail.entryFee }}/ {{ eventsDetail.teamSize}}</div>
                 <div class="rounds mx-auto">
-                    <div class="round" v-for="(round, index) in eventsDetail.rounds"><span class="roundIndice">Round {{index + 1}} :</span> {{ round }}</div>
+                    <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index"><span class="roundIndice">Round {{index + 1}} :</span> {{ round }}</div>
                 </div>
                 <div class="notes" v-if="eventsDetail.notes">
                     <div class="roundIndice">Notes:</div> <pre>{{eventsDetail.notes}}</pre>
                 </div>
                 <div class="managers">
-                    <div class="manager" v-for="manager in eventsDetail.managers">
+                    <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                         <div class="name">{{manager.name}}</div>
                         <div class="contact">{{manager.phone}}</div>
                     </div>
